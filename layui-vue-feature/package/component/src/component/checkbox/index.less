@@ -1,0 +1,189 @@
+@checkbox-lg: 18px;
+@checkbox-md: 16px;
+@checkbox-sm: 14px;
+@checkbox-xs: 12px;
+
+@checkbox-lg-font-size: 16px;
+@checkbox-md-font-size: 14px;
+@checkbox-sm-font-size: 12px;
+@checkbox-xs-font-size: 10px;
+
+.set-size(@size, @font-size) {
+  & {
+    height: @size;
+    line-height: @size;
+    .layui-form-checkbox[lay-skin="primary"]  {
+      .layui-icon {
+        width: @size;
+        height: @size;
+        font-size: @font-size;
+      }
+      .layui-checkbox-label {
+        height: @size;
+        line-height: @size;
+        font-size: @font-size;
+      }
+    }
+  }
+}
+
+.layui-checkbox{
+  &[size="lg"] {
+    .set-size(@checkbox-lg, @checkbox-lg-font-size);
+  }
+  &[size="md"] {
+    .set-size(@checkbox-md, @checkbox-md-font-size);
+  }
+  &[size="sm"] {
+    .set-size(@checkbox-sm, @checkbox-sm-font-size);
+  }
+  &[size="xs"] {
+    .set-size(@checkbox-xs, @checkbox-xs-font-size);
+  }
+}
+
+.layui-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.layui-form-checkbox {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  padding-right: 30px;
+  cursor: pointer;
+  font-size: 0;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  box-sizing: border-box;
+}
+
+.layui-form-checkbox span {
+  padding: 0 10px;
+  height: 100%;
+  font-size: 14px;
+  border-radius: 2px 0 0 2px;
+  background-color: var(--global-neutral-color-6);
+  color: #fff;
+  overflow: hidden;
+}
+
+.layui-form-checkbox:hover span {
+  background-color: var(--global-neutral-color-8);
+}
+
+.layui-form-checkbox i {
+  top: 0;
+  right: 0;
+  width: 29px;
+  height: 28px;
+  position: absolute;
+  border-top: 1px solid var(--global-neutral-color-6);
+  border-bottom: 1px solid var(--global-neutral-color-6);
+  border-right: 1px solid var(--global-neutral-color-6);
+  border-radius: 0 2px 2px 0;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.layui-form-checkbox:hover i {
+  border-color: var(--global-neutral-color-8);
+  color: var(--global-neutral-color-8);
+}
+
+.layui-form-checkbox[lay-skin="primary"] {
+  height: auto !important;
+  line-height: normal !important;
+  min-width: 18px;
+  min-height: 18px;
+  border: none !important;
+  margin-right: 0;
+  padding-left: 28px;
+  padding-right: 0;
+  background: 0 0;
+}
+
+.layui-form-checkbox[lay-skin="primary"] span {
+  padding-left: 0;
+  padding-right: 15px;
+  line-height: 18px;
+  background: 0 0;
+  color: #666;
+}
+
+.layui-form-checkbox[lay-skin="primary"] i {
+  right: auto;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border: 1px solid var(--global-neutral-color-6);
+  font-size: 12px;
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+
+.layui-form-checkbox[lay-skin="primary"]:hover i {
+  border-color: var(--global-checked-color);
+  color: #fff;
+}
+
+.layui-form-checked,
+.layui-form-checked:hover {
+  border-color: var(--global-checked-color);
+}
+
+.layui-form-checked i,
+.layui-form-checked:hover i {
+  color: var(--global-checked-color);
+}
+
+.layui-form-checked span,
+.layui-form-checked:hover span {
+  background-color: var(--global-checked-color);
+}
+
+.layui-form-checked[lay-skin="primary"] i {
+  border-color: var(--global-checked-color);
+  background-color: var(--global-checked-color);
+  color: #fff;
+}
+
+.layui-form-checked[lay-skin="primary"] span {
+  background: 0 0 !important;
+}
+
+.layui-checkbox-disabled[lay-skin="primary"] span {
+  background: 0 0 !important;
+  color: var(--global-neutral-color-8) !important;
+}
+
+.layui-checkbox-disabled[lay-skin="primary"]:hover i {
+  border-color: var(--global-neutral-color-6);
+}
+
+.layui-checkbox-disabled,
+.layui-checkbox-disabled i {
+  border-color: var(--global-neutral-color-3) !important;
+}
+
+.layui-checkbox-disabled span {
+  background-color: var(--global-neutral-color-3) !important;
+}
+
+.layui-checkbox-disabled em {
+  color: var(--global-neutral-color-6) !important;
+}
+
+.layui-checkbox-disabled:hover i {
+  color: #fff !important;
+}
+
+.layui-checkbox-disabled .layui-icon-ok,.layui-checkbox-disabled .layui-icon-subtraction{
+  background-color: var(--global-neutral-color-3) !important;
+  border-color: var(--global-neutral-color-3) !important;
+}
